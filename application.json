@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "id": "Page1",
+      "isDefault": true
+    },
+    {
+      "id": "Admin page",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#F5D1D1",
+  "icon": "book",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "viewerLayout": "{\"color\":\"#18181b\",\"logoUrl\":\"https://cdn.luogu.com.cn/upload/image_hosting/78g6ya1n.png\",\"name\":\"BaicaiCoin's Librrrrrrrr\",\"treeData\":[{\"title\":\"Admin page\",\"pageId\":\"645fc395de5d5825c7ae76f2\",\"isPage\":true,\"icon\":\"setting-o\"}],\"outsiderTree\":[{\"title\":\"Page1\",\"pageId\":\"645fa4dcde5d5825c7ae76a5\",\"isPage\":true}]}",
+  "deleted": false
+}
