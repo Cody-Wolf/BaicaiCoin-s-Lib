@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "LibraryReset",
+    "name": "CardList",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "http://8.130.99.161:8004"
       },
       "invalids": [],
@@ -17,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Card",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/reset",
+      "path": "/lib/showCard",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
@@ -37,7 +36,7 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
@@ -48,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_LibraryReset",
+  "id": "Card_CardList",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645feef9de5d5825c7ae770c"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460d9e3de5d5825c7ae7940"
 }

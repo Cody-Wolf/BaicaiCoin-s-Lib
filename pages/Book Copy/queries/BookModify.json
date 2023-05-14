@@ -17,7 +17,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Book Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -118,7 +118,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_BookModify",
+  "id": "Book Copy_BookModify",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fe0c0de5d5825c7ae7703"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f204de5d5825c7ae7a31"
 }

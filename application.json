@@ -5,7 +5,15 @@
       "isDefault": true
     },
     {
-      "id": "Admin page",
+      "id": "Book",
+      "isDefault": false
+    },
+    {
+      "id": "Card",
+      "isDefault": false
+    },
+    {
+      "id": "Book Copy",
       "isDefault": false
     }
   ],
