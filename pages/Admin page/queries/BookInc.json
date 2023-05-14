@@ -22,12 +22,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "path": "/lib/inc",
-      "headers": [
-        {
-          "key": "stock",
-          "value": "{{IncInput.inputText}}"
-        }
-      ],
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
@@ -58,9 +53,6 @@
       },
       {
         "key": "queryParameters[1].value"
-      },
-      {
-        "key": "headers[0].value"
       }
     ],
     "isValid": true,

@@ -1905,7 +1905,7 @@
                       "dataType": "number",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.bookId))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "fieldType": "Number Input",
-                      "sourceData": 1,
+                      "sourceData": 2,
                       "isCustomField": false,
                       "accessor": "bookId",
                       "identifier": "bookId",
@@ -1993,7 +1993,7 @@
                       "dataType": "number",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.publishYear))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "fieldType": "Number Input",
-                      "sourceData": 2022,
+                      "sourceData": 123,
                       "isCustomField": false,
                       "accessor": "publishYear",
                       "identifier": "publishYear",
@@ -2037,7 +2037,7 @@
                       "dataType": "number",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.price))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "fieldType": "Number Input",
-                      "sourceData": 13,
+                      "sourceData": 123,
                       "isCustomField": false,
                       "accessor": "price",
                       "identifier": "price",
@@ -2059,7 +2059,7 @@
                       "dataType": "number",
                       "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.stock))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "fieldType": "Number Input",
-                      "sourceData": 161,
+                      "sourceData": 129,
                       "isCustomField": false,
                       "accessor": "stock",
                       "identifier": "stock",
@@ -2072,7 +2072,7 @@
                       "isDisabled": false,
                       "isRequired": false,
                       "isSpellCheck": false,
-                      "isVisible": true,
+                      "isVisible": false,
                       "labelTextSize": "0.875rem",
                       "label": "Stock"
                     },
@@ -2407,13 +2407,13 @@
                   "widgetName": "Canvas5",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 240,
+                  "bottomRow": 250,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 240,
+                  "minHeight": 260,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [],
@@ -2421,7 +2421,7 @@
                     {
                       "boxShadow": "none",
                       "widgetName": "IconButton2",
-                      "onClick": "{{closeModal('Modal1')}}",
+                      "onClick": "{{closeModal('ResetModal')}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "图标按钮",
                       "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
@@ -2435,6 +2435,11 @@
                       "type": "ICON_BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 58,
                       "dynamicBindingPathList": [
                         {
@@ -2867,6 +2872,7 @@
                       "widgetName": "IncInput",
                       "displayName": "输入框",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "onSubmit": "",
                       "searchTags": [
                         "form",
                         "text input",
@@ -2882,7 +2888,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 5.375,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSubmit"
+                        }
+                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 11,
                       "dynamicBindingPathList": [
@@ -2893,7 +2903,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Auto",
                       "labelStyle": "",
                       "inputType": "NUMBER",
                       "isDisabled": false,
