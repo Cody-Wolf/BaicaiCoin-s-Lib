@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BookQuery",
+    "name": "BookRemove",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -17,14 +17,19 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Book",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/query",
+      "path": "/lib/remove",
       "headers": [],
       "encodeParamsToggle": true,
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "book_id",
+          "value": "{{data_table.selectedRow.bookId}}"
+        }
+      ],
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -37,18 +42,24 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "queryParameters[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "data_table.selectedRow.bookId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_BookQuery",
+  "id": "Book_BookRemove",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fd8f1de5d5825c7ae76fd"
+  "gitSyncId": "645fa4dcde5d5825c7ae76a2_646000c2de5d5825c7ae7716"
 }

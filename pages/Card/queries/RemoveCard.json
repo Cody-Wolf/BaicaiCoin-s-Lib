@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BookInc",
+    "name": "RemoveCard",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "http://8.130.99.161:8004"
       },
       "invalids": [],
@@ -17,21 +16,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Card",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/inc",
+      "path": "/lib/removeCard",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "book_id",
-          "value": "{{data_table.selectedRow.bookId}}"
-        },
-        {
-          "key": "stock",
-          "value": "{{IncInput.inputText}}"
+          "key": "card_id",
+          "value": "{{data_table.selectedRow.cardId}}"
         }
       ],
       "bodyFormData": [],
@@ -46,28 +41,27 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
-        "key": "queryParameters[0].value"
+        "key": "path"
       },
       {
-        "key": "queryParameters[1].value"
+        "key": "queryParameters[0].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "IncInput.inputText",
-      "data_table.selectedRow.bookId"
+      "data_table.selectedRow.cardId"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_BookInc",
+  "id": "Card_RemoveCard",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fef17de5d5825c7ae770e"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460e8c5de5d5825c7ae7a1a"
 }

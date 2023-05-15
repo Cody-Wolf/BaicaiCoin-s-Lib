@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BookRemove",
+    "name": "BorrowHistory",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "http://8.130.99.161:8004"
       },
       "invalids": [],
@@ -17,17 +16,17 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Book Copy",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/remove",
+      "path": "/lib/borrowHistory",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
-          "key": "book_id",
-          "value": "{{data_table.selectedRow.bookId}}"
+          "key": "card_id",
+          "value": "{{insert_form.formData.card_id}}"
         }
       ],
       "bodyFormData": [],
@@ -42,8 +41,11 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
       {
         "key": "queryParameters[0].value"
       }
@@ -52,14 +54,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "data_table.selectedRow.bookId"
+      "insert_form.formData.card_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_BookRemove",
+  "id": "Book Copy_BorrowHistory",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_646000c2de5d5825c7ae7716"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f71fde5d5825c7ae7a43"
 }

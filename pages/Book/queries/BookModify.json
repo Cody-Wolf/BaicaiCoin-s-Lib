@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BookStore",
+    "name": "BookModify",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -17,41 +17,45 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Admin page",
+    "pageId": "Book",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/store",
+      "path": "/lib/modify",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
           "key": "category",
-          "value": "{{insert_form.formData.category}}"
+          "value": "{{update_form.formData.category}}"
         },
         {
           "key": "title",
-          "value": "{{insert_form.formData.title}}"
+          "value": "{{update_form.formData.title}}"
         },
         {
           "key": "press",
-          "value": "{{insert_form.formData.press}}"
+          "value": "{{update_form.formData.press}}"
         },
         {
           "key": "publish_year",
-          "value": "{{insert_form.formData.publishYear}}"
+          "value": "{{update_form.formData.publishYear}}"
         },
         {
           "key": "author",
-          "value": "{{insert_form.formData.author}}"
+          "value": "{{update_form.formData.author}}"
         },
         {
           "key": "price",
-          "value": "{{insert_form.formData.price}}"
+          "value": "{{update_form.formData.price}}"
         },
         {
           "key": "stock",
-          "value": "{{insert_form.formData.stock}}"
+          "value": "{{update_form.formData.stock}}"
+        },
+        {
+          "key": "book_id",
+          "value": "{{update_form.formData.bookId}}"
         }
       ],
       "bodyFormData": [],
@@ -68,6 +72,9 @@
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
+      {
+        "key": "path"
+      },
       {
         "key": "queryParameters[0].value"
       },
@@ -88,26 +95,30 @@
       },
       {
         "key": "queryParameters[6].value"
+      },
+      {
+        "key": "queryParameters[7].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "insert_form.formData.author",
-      "insert_form.formData.category",
-      "insert_form.formData.press",
-      "insert_form.formData.price",
-      "insert_form.formData.publishYear",
-      "insert_form.formData.stock",
-      "insert_form.formData.title"
+      "update_form.formData.author",
+      "update_form.formData.bookId",
+      "update_form.formData.category",
+      "update_form.formData.press",
+      "update_form.formData.price",
+      "update_form.formData.publishYear",
+      "update_form.formData.stock",
+      "update_form.formData.title"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Admin page_BookStore",
+  "id": "Book_BookModify",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fdb58de5d5825c7ae76ff"
+  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fe0c0de5d5825c7ae7703"
 }

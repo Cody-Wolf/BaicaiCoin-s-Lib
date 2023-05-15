@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "helloWorldDemo",
+    "name": "CardList",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "http://8.130.99.161:8004"
       },
       "invalids": [],
@@ -17,11 +16,11 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "Card",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/hello/say",
+      "path": "/lib/showCard",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
@@ -48,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_helloWorldDemo",
+  "id": "Card_CardList",
   "deleted": false,
-  "gitSyncId": "645fa4dcde5d5825c7ae76a2_645fabc4de5d5825c7ae76bf"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460d9e3de5d5825c7ae7940"
 }
