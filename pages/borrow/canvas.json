@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Book Copy",
-    "slug": "book-copy",
+    "name": "borrow",
+    "slug": "borrow",
     "customSlug": "",
     "layouts": [
       {
@@ -2245,7 +2245,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Book Copy_BorrowHistory",
+              "id": "borrow_BorrowHistory",
               "name": "BorrowHistory",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -2258,7 +2258,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Book Copy",
+        "id": "borrow",
         "deleted": false,
         "policies": [],
         "userPermissions": []

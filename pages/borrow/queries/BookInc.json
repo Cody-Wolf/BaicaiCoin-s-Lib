@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BookQuery",
+    "name": "BookInc",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -17,14 +17,23 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Book Copy",
+    "pageId": "borrow",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/query",
+      "path": "/lib/inc",
       "headers": [],
       "encodeParamsToggle": true,
-      "queryParameters": [],
+      "queryParameters": [
+        {
+          "key": "book_id",
+          "value": "{{data_table.selectedRow.bookId}}"
+        },
+        {
+          "key": "stock",
+          "value": "{{IncInput.inputText}}"
+        }
+      ],
       "bodyFormData": [],
       "httpMethod": "GET",
       "selfReferencingDataPaths": [],
@@ -38,17 +47,27 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "queryParameters[0].value"
+      },
+      {
+        "key": "queryParameters[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "IncInput.inputText",
+      "data_table.selectedRow.bookId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Book Copy_BookQuery",
+  "id": "borrow_BookInc",
   "deleted": false,
-  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f204de5d5825c7ae7a34"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f204de5d5825c7ae7a33"
 }

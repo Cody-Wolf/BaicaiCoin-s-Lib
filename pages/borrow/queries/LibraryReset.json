@@ -17,7 +17,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Book Copy",
+    "pageId": "borrow",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -48,7 +48,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Book Copy_LibraryReset",
+  "id": "borrow_LibraryReset",
   "deleted": false,
   "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f204de5d5825c7ae7a32"
 }

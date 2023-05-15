@@ -3326,8 +3326,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "data_table.selectedRow.bookId",
-                "IncInput.inputText"
+                "IncInput.inputText",
+                "data_table.selectedRow.bookId"
               ],
               "timeoutInMillisecond": 10000
             }

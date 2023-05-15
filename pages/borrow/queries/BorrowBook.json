@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "ReturnBook",
+    "name": "BorrowBook",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Book Copy",
+    "pageId": "borrow",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -26,15 +26,15 @@
       "queryParameters": [
         {
           "key": "book_id",
-          "value": "{{ReturnModal.formData.book_id}}"
+          "value": "{{BorrowModal.formData.book_id}}"
         },
         {
           "key": "card_id",
-          "value": "{{ReturnModal.formData.card_id}}"
+          "value": "{{BorrowModal.formData.card_id}}"
         },
         {
           "key": "borrowBook",
-          "value": "{{ReturnModal.formData.borrowBook}}"
+          "value": "{{BorrowModal.formData.borrowBook}}"
         }
       ],
       "bodyFormData": [],
@@ -68,16 +68,16 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "ReturnModal.formData.book_id",
-      "ReturnModal.formData.borrowBook",
-      "ReturnModal.formData.card_id"
+      "BorrowModal.formData.book_id",
+      "BorrowModal.formData.borrowBook",
+      "BorrowModal.formData.card_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Book Copy_ReturnBook",
+  "id": "borrow_BorrowBook",
   "deleted": false,
-  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f43dde5d5825c7ae7a40"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f310de5d5825c7ae7a3d"
 }

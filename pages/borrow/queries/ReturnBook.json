@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "BorrowHistory",
+    "name": "ReturnBook",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,17 +16,25 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Book Copy",
+    "pageId": "borrow",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/borrowHistory",
+      "path": "/lib/borrowBo",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
+          "key": "book_id",
+          "value": "{{ReturnModal.formData.book_id}}"
+        },
+        {
           "key": "card_id",
-          "value": "{{insert_form.formData.card_id}}"
+          "value": "{{ReturnModal.formData.card_id}}"
+        },
+        {
+          "key": "borrowBook",
+          "value": "{{ReturnModal.formData.borrowBook}}"
         }
       ],
       "bodyFormData": [],
@@ -41,27 +49,35 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "path"
       },
       {
         "key": "queryParameters[0].value"
+      },
+      {
+        "key": "queryParameters[1].value"
+      },
+      {
+        "key": "queryParameters[2].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "insert_form.formData.card_id"
+      "ReturnModal.formData.book_id",
+      "ReturnModal.formData.borrowBook",
+      "ReturnModal.formData.card_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Book Copy_BorrowHistory",
+  "id": "borrow_ReturnBook",
   "deleted": false,
-  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f71fde5d5825c7ae7a43"
+  "gitSyncId": "6460b1cdde5d5825c7ae78b3_6460f43dde5d5825c7ae7a40"
 }
