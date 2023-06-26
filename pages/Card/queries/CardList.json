@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "http://8.130.99.161:8004"
+        "url": "http://lab5.free.idcfengye.com"
       },
       "invalids": [],
       "messages": [],
