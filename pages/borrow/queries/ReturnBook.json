@@ -20,21 +20,25 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/lib/borrowBo",
+      "path": "/lib/returnBo",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
         {
           "key": "book_id",
-          "value": "{{ReturnModal.formData.book_id}}"
+          "value": "{{ReturnModal.formData.bookId}}"
         },
         {
           "key": "card_id",
-          "value": "{{ReturnModal.formData.card_id}}"
+          "value": "{{ReturnModal.formData.cardId}}"
         },
         {
-          "key": "borrowBook",
-          "value": "{{ReturnModal.formData.borrowBook}}"
+          "key": "borrowTime",
+          "value": "0"
+        },
+        {
+          "key": "returnTime",
+          "value": "{{ReturnModal.formData.returnTime}}"
         }
       ],
       "bodyFormData": [],
@@ -61,16 +65,16 @@
         "key": "queryParameters[1].value"
       },
       {
-        "key": "queryParameters[2].value"
+        "key": "queryParameters[3].value"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "ReturnModal.formData.book_id",
-      "ReturnModal.formData.borrowBook",
-      "ReturnModal.formData.card_id"
+      "ReturnModal.formData.bookId",
+      "ReturnModal.formData.cardId",
+      "ReturnModal.formData.returnTime"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

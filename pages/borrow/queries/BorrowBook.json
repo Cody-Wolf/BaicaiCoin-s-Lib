@@ -33,8 +33,12 @@
           "value": "{{BorrowModal.formData.card_id}}"
         },
         {
-          "key": "borrowBook",
-          "value": "{{BorrowModal.formData.borrowBook}}"
+          "key": "borrowTime",
+          "value": "{{BorrowModal.formData.borrowTime}}"
+        },
+        {
+          "key": "returnTime",
+          "value": "0"
         }
       ],
       "bodyFormData": [],
@@ -69,7 +73,7 @@
     "messages": [],
     "jsonPathKeys": [
       "BorrowModal.formData.book_id",
-      "BorrowModal.formData.borrowBook",
+      "BorrowModal.formData.borrowTime",
       "BorrowModal.formData.card_id"
     ],
     "userSetOnLoad": false,
